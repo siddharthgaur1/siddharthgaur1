@@ -2,8 +2,6 @@
 
 **Data Science & ML Engineer** · Building at the intersection of **graph neural networks**, **LLMs**, and **telecom systems**
 
-🏢 Currently @ **Jio** — building a GATv2-based Network Digital Twin for telecom root cause analysis using PyTorch Geometric  
-📍 Mumbai, India
 
 ---
 
