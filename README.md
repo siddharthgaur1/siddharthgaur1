@@ -11,7 +11,6 @@
 
 | Project | What it does | Stack |
 |---|---|---|
-| [🌐 Network Digital Twin](https://github.com/siddharthgaur1) *(private)* | GATv2-based RCA system for telecom networks — classifies fault propagation across 40-node ISIS topologies with ~2500 real incidents | PyTorch · PyG · GATv2 · NetworkX |
 | [📈 IPO GMP Predictor](https://github.com/siddharthgaur1/Ipo-Gmp-Predictor) | Predicts IPO listing returns from grey market signals · **91.8% directional accuracy** | XGBoost · scikit-learn · Streamlit |
 | [🧭 QueryPilot](https://github.com/siddharthgaur1/Query-pilot) | Natural language → safe SQL → results · 4-layer injection protection | LLM · SQLite · Streamlit |
 | [📊 FinRAG](https://github.com/siddharthgaur1/FinRag) | RAG over financial PDFs · hybrid retrieval · hallucination guard | ChromaDB · MiniLM · Claude/Llama |
