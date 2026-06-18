@@ -7,11 +7,11 @@
 
 | Project | What it does | Stack |
 |---|---|---|
-| [📈 IPO GMP Predictor](https://github.com/YOUR_USERNAME/ipo-gmp-predictor) | Predicts IPO listing returns from grey market signals · **91.8% directional accuracy** | XGBoost · scikit-learn · Streamlit |
-| [🧭 QueryPilot](https://github.com/YOUR_USERNAME/querypilot) | Natural language → safe SQL → results · 4-layer injection protection | LLM · SQLite · Streamlit |
-| [📊 FinRAG](https://github.com/YOUR_USERNAME/finrag) | RAG over financial PDFs · hybrid retrieval · hallucination guard | ChromaDB · MiniLM · Claude/Llama |
-| [⚖️ SEBI Explorer](https://github.com/YOUR_USERNAME/sebi-explorer) | Searchable database of 11,000+ SEBI enforcement orders · entity networks | Scrapy · NetworkX · Plotly |
-| [🚂 RailGraph](https://github.com/YOUR_USERNAME/rail-graph) | Graph analysis of Indian Railways · PageRank · resilience simulation | NetworkX · Folium · Dijkstra |
+| [📈 IPO GMP Predictor](https://github.com/siddharthgaur1/Ipo-Gmp-Predictor) | Predicts IPO listing returns from grey market signals · **91.8% directional accuracy** | XGBoost · scikit-learn · Streamlit |
+| [🧭 QueryPilot](https://github.com/siddharthgaur1/Query-pilot) | Natural language → safe SQL → results · 4-layer injection protection | LLM · SQLite · Streamlit |
+| [📊 FinRAG](https://github.com/siddharthgaur1/FinRag) | RAG over financial PDFs · hybrid retrieval · hallucination guard | ChromaDB · MiniLM · Claude/Llama |
+| [⚖️ SEBI Explorer](https://github.com/siddharthgaur1/Sebi-Explorer) | Searchable database of 11,000+ SEBI enforcement orders · entity networks | Scrapy · NetworkX · Plotly |
+| [🚂 RailGraph](https://github.com/siddharthgaur1/Rail-Graphs) | Graph analysis of Indian Railways · PageRank · resilience simulation | NetworkX · Folium · Dijkstra |
 
 ---
 
