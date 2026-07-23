@@ -38,7 +38,8 @@
 | Project | What it does | Stack |
 |---|---|---|
 | [🚦 LLM Regression Detector](https://github.com/siddharthgaur1/llm-regression-detector) | Prompts drift silently. A CI harness that runs a golden dataset through every prompt change, scores it, and alerts on regressions before they ship | OpenAI · pytest · GitHub Actions |
-| [🧭 QueryPilot](https://github.com/siddharthgaur1/querypilot) | Natural language → SQL against a live introspected schema, with three layered safety checks (blocklist, prefix check, read-only engine) so a bypass at one layer still fails safe | Claude / Ollama · SQLite · Streamlit |
+| [🧭 QueryPilot](https://github.com/siddharthgaur1/querypilot) | Natural language → SQL against a live introspected schema, with four layered safety checks — a SQLite **authorizer** denies every non-read at prepare time, so a text-level bypass still fails safe. Clickable with no API key | Claude / Ollama · SQLite · Streamlit |
+| [🕸️ text-to-graph-agent](https://github.com/siddharthgaur1/text-to-graph-agent) | The graph counterpart to QueryPilot: natural language → **Cypher** → grounded answer over a knowledge graph, with a static read-only validator. Runs with no external services (in-process NetworkX backend, local embeddings) | LangGraph · grand-cypher · NetworkX / Neo4j |
 
 **Applied ML & data**
 
