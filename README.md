@@ -25,6 +25,8 @@
 |---|---|---|
 | [🤖 Autonomous Data Scientist](https://github.com/siddharthgaur1/autonomous-data-scientist) | Give it a CSV and *"predict churn"* — it cleans the data, engineers features, tunes the winning model, evaluates it honestly, and ships a model card and slide deck. Generated code runs in a locked-down sandbox | LangGraph · OpenAI · FastAPI · Redis |
 | [⚖️ Research + Debate Agent](https://github.com/siddharthgaur1/research-debate-agent) | Agents research in parallel, argue both sides, audit their own sources for bias, and arbitrate into a report where every claim carries a citation and a confidence score | LangGraph · OpenAI · ChromaDB · FastAPI |
+| [🏦 Credit Memo Agent](https://github.com/siddharthgaur1/credit-memo-agent) | Drafts a business loan credit memo: checklist gaps, financials extracted with a source page and row label on every figure, ratios computed in Python rather than by the model. A balance sheet that doesn't balance is a finding, not a silent correction. Runs fully offline on Ollama — the cloud path is opt-in and can't activate by accident | LangGraph · Ollama · pdfplumber · FastAPI |
+| [🕸️ Text-to-Graph Agent](https://github.com/siddharthgaur1/text-to-graph-agent) | Natural language → executed Cypher over a knowledge graph. A wrong relationship direction doesn't throw, it returns an empty set that reads as "no data" — so entities resolve to node identities first, hops are planned, and a validator binds parameters and injects a LIMIT before anything runs | LangGraph · Neo4j · ChromaDB · FastAPI |
 
 **Retrieval & RAG**
 
@@ -37,6 +39,7 @@
 
 | Project | What it does | Stack |
 |---|---|---|
+| [🧪 Agent Eval Harness](https://github.com/siddharthgaur1/agent-eval-harness) | Scores multi-step agent *trajectories*, not prompt/response pairs: right tools, right order, recovered from failures, stayed in budget — and did anything the agent actually did justify the answer it gave? Catches the fluent final report quoting a metric no tool in the run ever produced. Every score cites the step indices it rests on | OpenAI · Pydantic · FastAPI · pytest |
 | [🚦 LLM Regression Detector](https://github.com/siddharthgaur1/llm-regression-detector) | Prompts drift silently. A CI harness that runs a golden dataset through every prompt change, scores it, and alerts on regressions before they ship | OpenAI · pytest · GitHub Actions |
 | [🧭 QueryPilot](https://github.com/siddharthgaur1/querypilot) | Natural language → SQL against a live introspected schema, with four layered safety checks — a SQLite **authorizer** denies every non-read at prepare time, so a text-level bypass still fails safe. Clickable with no API key | Claude / Ollama · SQLite · Streamlit |
 | [🕸️ text-to-graph-agent](https://github.com/siddharthgaur1/text-to-graph-agent) | The graph counterpart to QueryPilot: natural language → **Cypher** → grounded answer over a knowledge graph, with a static read-only validator. Runs with no external services (in-process NetworkX backend, local embeddings) | LangGraph · grand-cypher · NetworkX / Neo4j |
