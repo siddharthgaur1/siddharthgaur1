@@ -6,6 +6,21 @@
 
 ---
 
+### ▶ Live demos — click and try, no signup, no API key
+
+| Demo | What you'll see |
+|---|---|
+| **[QueryPilot](https://siddharthgaur1-siddharthquerypilot-srcapp-ebww0h.streamlit.app/)** | Natural-language → SQL running live on real data, behind a read-only SQLite authorizer |
+| **[Agent Eval Harness](https://siddharthgaur1-siddharthagent-eval-harness-dashboardapp-rppgf9.streamlit.app/)** | A real detected regression between two agent versions, scored on trajectories |
+| **[RailGraph](https://siddharthgaur1-siddharthrail-graph-srcapp-hme3vr.streamlit.app/)** | 600-station rail network — PageRank, betweenness, k-shortest-paths, resilience sim |
+| **[IPO GMP Predictor](https://siddharthgaur1-siddharthipo-gmp-srcapp-htnhfl.streamlit.app/)** | XGBoost pipeline with time-series CV and calibrated confidence bands (synthetic data) |
+| **[LLM Regression Detector](https://siddharthgaur1-siddharthllm-regression-detector-dashboardapp.streamlit.app/)** | CI-style prompt-regression dashboard: v1 fails at 0.82, v2 passes at 0.93 |
+| **[SEBI Enforcement Explorer](https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/)** | Real public SEBI orders, classified and analysed — search, network, timeline |
+
+<sub>Hosted free on Streamlit Community Cloud. Apps sleep when idle — the first load may take ~30s to wake.</sub>
+
+---
+
 ### 🔬 Research
 
 **GNN-based root cause analysis for network topologies** — two working prototypes:
@@ -39,18 +54,17 @@
 
 | Project | What it does | Stack |
 |---|---|---|
-| [🧪 Agent Eval Harness](https://github.com/siddharthgaur1/agent-eval-harness) | Scores multi-step agent *trajectories*, not prompt/response pairs: right tools, right order, recovered from failures, stayed in budget — and did anything the agent actually did justify the answer it gave? Catches the fluent final report quoting a metric no tool in the run ever produced. Every score cites the step indices it rests on | OpenAI · Pydantic · FastAPI · pytest |
-| [🚦 LLM Regression Detector](https://github.com/siddharthgaur1/llm-regression-detector) | Prompts drift silently. A CI harness that runs a golden dataset through every prompt change, scores it, and alerts on regressions before they ship | OpenAI · pytest · GitHub Actions |
-| [🧭 QueryPilot](https://github.com/siddharthgaur1/querypilot) | Natural language → SQL against a live introspected schema, with four layered safety checks — a SQLite **authorizer** denies every non-read at prepare time, so a text-level bypass still fails safe. Clickable with no API key | Claude / Ollama · SQLite · Streamlit |
-| [🕸️ text-to-graph-agent](https://github.com/siddharthgaur1/text-to-graph-agent) | The graph counterpart to QueryPilot: natural language → **Cypher** → grounded answer over a knowledge graph, with a static read-only validator. Runs with no external services (in-process NetworkX backend, local embeddings) | LangGraph · grand-cypher · NetworkX / Neo4j |
+| [🧭 QueryPilot](https://github.com/siddharthgaur1/querypilot) · **[▶ Live](https://siddharthgaur1-siddharthquerypilot-srcapp-ebww0h.streamlit.app/)** | Natural language → SQL against a live introspected schema, with four layered safety checks — a SQLite **authorizer** denies every non-read at prepare time, so a text-level bypass still fails safe. Clickable with no API key | Claude / Ollama · SQLite · Streamlit |
+| [🧪 Agent Eval Harness](https://github.com/siddharthgaur1/agent-eval-harness) · **[▶ Live](https://siddharthgaur1-siddharthagent-eval-harness-dashboardapp-rppgf9.streamlit.app/)** | Scores multi-step agent *trajectories*, not prompt/response pairs: right tools, right order, recovered from failures, stayed in budget — and did anything the agent actually did justify the answer it gave? Catches the fluent final report quoting a metric no tool in the run ever produced. Every score cites the step indices it rests on | OpenAI · Pydantic · FastAPI · pytest |
+| [🚦 LLM Regression Detector](https://github.com/siddharthgaur1/llm-regression-detector) · **[▶ Live](https://siddharthgaur1-siddharthllm-regression-detector-dashboardapp.streamlit.app/)** | Prompts drift silently. A CI harness that runs a golden dataset through every prompt change, scores it, and alerts on regressions before they ship | OpenAI · pytest · GitHub Actions |
 
 **Applied ML & data**
 
 | Project | What it does | Stack |
 |---|---|---|
-| [⚖️ SEBI Enforcement Explorer](https://github.com/siddharthgaur1/sebi-explorer) | Turns SEBI's unstructured HTML order listing (~11k orders) into a searchable dataset — violation classification, entity extraction, and pattern analytics | BeautifulSoup · NetworkX · Streamlit · Plotly |
-| [🚂 RailGraph](https://github.com/siddharthgaur1/rail-graph) | Treats India's rail network as a graph rather than a timetable: PageRank for station importance, betweenness to find the junctions whose failure disrupts the most traffic | NetworkX · Folium · Plotly |
-| [📈 IPO GMP Predictor](https://github.com/siddharthgaur1/ipo-gmp) | Models IPO listing-day returns from Grey Market Premium and subscription signals, using time-series CV to avoid leaking future market regimes *(synthetic dataset — demonstrates the pipeline, not validated on real markets)* | XGBoost · scikit-learn · Streamlit |
+| [🚂 RailGraph](https://github.com/siddharthgaur1/rail-graph) · **[▶ Live](https://siddharthgaur1-siddharthrail-graph-srcapp-hme3vr.streamlit.app/)** | Treats India's rail network as a graph rather than a timetable: PageRank for station importance, betweenness to find the junctions whose failure disrupts the most traffic | NetworkX · Folium · Plotly |
+| [📈 IPO GMP Predictor](https://github.com/siddharthgaur1/ipo-gmp) · **[▶ Live](https://siddharthgaur1-siddharthipo-gmp-srcapp-htnhfl.streamlit.app/)** | Models IPO listing-day returns from Grey Market Premium and subscription signals, using time-series CV to avoid leaking future market regimes *(synthetic dataset — demonstrates the pipeline, not validated on real markets)* | XGBoost · scikit-learn · Streamlit |
+| [⚖️ SEBI Enforcement Explorer](https://github.com/siddharthgaur1/sebi-explorer) · **[▶ Live](https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/)** | Turns SEBI's unstructured HTML order listing into a searchable dataset — violation classification, entity extraction, and pattern analytics | BeautifulSoup · NetworkX · Streamlit · Plotly |
 
 ---
 
