@@ -4,6 +4,8 @@
 
 **AI/ML Engineer** · Building at the intersection of **graph neural networks**, **LLM agents**, and **retrieval systems**
 
+**📍 Currently open to AI/ML Engineer roles — Mumbai / remote**
+
 ---
 
 ### ▶ Live demos — click and try, no signup, no API key
