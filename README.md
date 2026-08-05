@@ -17,9 +17,9 @@
 | **[IPO GMP Predictor](https://siddharthgaur1-siddharthipo-gmp-srcapp-htnhfl.streamlit.app/)** | XGBoost pipeline with time-series CV and calibrated confidence bands (synthetic data) |
 | **[SEBI Enforcement Explorer](https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/)** | Real public SEBI orders, classified and analysed — search, network, timeline |
 
-<sub>Hosted free on Streamlit Community Cloud. Apps sleep when idle — the first load may take ~30s to wake.
-**Known issue (2026-08-05): these deployments are currently failing to boot after waking.** Being fixed;
-until then, every one of them runs locally from its repo's Quickstart with no API key.</sub>
+<sub>Hosted free on Streamlit Community Cloud. Apps sleep when idle — a sleeping app shows a
+"wake it back up?" prompt and takes ~30–60s to boot. All four were verified loading in a
+browser on 2026-08-06. Each also runs locally from its repo's Quickstart with no API key.</sub>
 
 ---
 
