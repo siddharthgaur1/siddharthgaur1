@@ -74,6 +74,7 @@ paid API key, the README says so instead of quoting one.
 |---|---|
 | **Datasets** | [indic-reg-bench](https://huggingface.co/datasets/siddharthgaur/indic-reg-bench) on HuggingFace — 11,957 indexed SEBI enforcement orders |
 | **Libraries** | [llm-regressor](https://github.com/siddharthgaur1/llm-regressor) (LLM regression testing + GitHub Action), [ml-dag](https://github.com/siddharthgaur1/ml-dag) (dependency-free DAG orchestrator), [vecbench](https://github.com/siddharthgaur1/vecbench) (vector-DB benchmarks) |
+| **Retrieval / RAG** | [FinRAG](https://github.com/siddharthgaur1/FinRag) (hybrid dense+keyword over financial PDFs, page-level citations, groundedness guard; retrieval runs keyless on local embeddings), [rag-hybrid-search](https://github.com/siddharthgaur1/rag-hybrid-search) (BM25 fusion + cross-encoder reranking + citation verification), [doc-intel](https://github.com/siddharthgaur1/doc-intel) (rule-based extraction from GST invoices, bank statements, ITR — no LLM) |
 | **Infra / MLOps** | [featurestore](https://github.com/siddharthgaur1/featurestore) (point-in-time correct joins), [ml-monitor](https://github.com/siddharthgaur1/ml-monitor) (drift detection), [agent-eval-harness](https://github.com/siddharthgaur1/agent-eval-harness) |
 | **Quant / finance** | [backtest-engine](https://github.com/siddharthgaur1/backtest-engine) (no-lookahead + Indian transaction costs), [nifty-forecaster](https://github.com/siddharthgaur1/nifty-forecaster), [causal-lens](https://github.com/siddharthgaur1/causal-lens) |
 
