@@ -6,6 +6,10 @@
 
 **📍 Currently open to AI/ML Engineer roles — Mumbai / remote**
 
+<a href="https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/"><img src="https://raw.githubusercontent.com/siddharthgaur1/sebi-explorer/main/docs/demo.png" width="620" alt="SEBI Enforcement Explorer - live demo"></a>
+
+<sub>▶ One of six live demos — **[SEBI Enforcement Explorer](https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/)**: real public SEBI enforcement orders, classified and analysed. No signup, no API key.</sub>
+
 ---
 
 ### 📌 Open Source
@@ -39,7 +43,7 @@ All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd 
 
 ---
 
-### ▶ Also built — six with live demos, no signup, no API key
+### ▶ Also built, no signup, no API key
 
 | Project | What it does | |
 |---|---|---|
