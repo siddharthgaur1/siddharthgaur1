@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:111827,50:2563EB,100:7C3AED&height=200&section=header&text=Siddharth%20Gaur&fontSize=54&fontColor=FFFFFF&fontAlignY=35&animation=fadeIn" alt="Siddharth Gaur" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,35:1E3A8A,70:2563EB,100:7C3AED&height=230&section=header&text=Siddharth%20Gaur&fontSize=64&fontColor=FFFFFF&fontAlignY=32&desc=AI%2FML%20Engineer%20%C2%B7%20Graph%20Neural%20Networks%20%C2%B7%20LLM%20Agents%20%C2%B7%20Retrieval%20Systems&descAlignY=54&descSize=17&descColor=BFDBFE&animation=twinkling" alt="Siddharth Gaur" />
 </p>
 
 <p align="center">
   <a href="https://siddharth-gaur.netlify.app">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=2800&pause=900&color=60A5FA&center=true&vCenter=true&width=760&lines=Graph+neural+networks+%C2%B7+LLM+agents+%C2%B7+Retrieval+systems;Every+number+below+traces+to+a+committed+result%2C+not+a+claim" alt="Typing introduction" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=19&duration=2800&pause=900&color=60A5FA&center=true&vCenter=true&width=760&lines=Every+number+below+traces+to+a+committed+result%2C+not+a+claim;Green+CI+%C2%B7+reproducible+benchmarks+%C2%B7+no+hand-waved+metrics" alt="Typing introduction" />
   </a>
 </p>
 
@@ -35,17 +35,17 @@
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=siddharthgaur1&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&border_radius=12">
-    <img src="https://github-readme-stats.vercel.app/api?username=siddharthgaur1&show_icons=true&include_all_commits=true&count_private=true&theme=default&hide_border=true&border_radius=12" alt="Siddharth's GitHub stats" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-eta-nine.vercel.app/api?username=siddharthgaur1&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&border_radius=12">
+    <img src="https://github-readme-stats-eta-nine.vercel.app/api?username=siddharthgaur1&show_icons=true&include_all_commits=true&count_private=true&theme=default&hide_border=true&border_radius=12" alt="Siddharth's GitHub stats" />
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=siddharthgaur1&layout=compact&theme=tokyonight&hide_border=true&border_radius=12">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=siddharthgaur1&layout=compact&theme=default&hide_border=true&border_radius=12" alt="Siddharth's most used languages" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-eta-nine.vercel.app/api/top-langs/?username=siddharthgaur1&layout=compact&theme=tokyonight&hide_border=true&border_radius=12">
+    <img src="https://github-readme-stats-eta-nine.vercel.app/api/top-langs/?username=siddharthgaur1&layout=compact&theme=default&hide_border=true&border_radius=12" alt="Siddharth's most used languages" />
   </picture>
 </div>
 <br />
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=siddharthgaur1&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6&margin-w=8" alt="Siddharth's trophy case" />
+  <img src="https://github-profile-trophy-eight.vercel.app/?username=siddharthgaur1&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6&margin-w=8" alt="Siddharth's trophy case" />
 </div>
 
 </details>
