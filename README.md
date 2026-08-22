@@ -29,27 +29,6 @@
 
 ---
 
-<details>
-<summary><strong>▸ GitHub stats</strong></summary>
-<br />
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-eta-nine.vercel.app/api?username=siddharthgaur1&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&border_radius=12">
-    <img src="https://github-readme-stats-eta-nine.vercel.app/api?username=siddharthgaur1&show_icons=true&include_all_commits=true&count_private=true&theme=default&hide_border=true&border_radius=12" alt="Siddharth's GitHub stats" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-eta-nine.vercel.app/api/top-langs/?username=siddharthgaur1&layout=compact&theme=tokyonight&hide_border=true&border_radius=12">
-    <img src="https://github-readme-stats-eta-nine.vercel.app/api/top-langs/?username=siddharthgaur1&layout=compact&theme=default&hide_border=true&border_radius=12" alt="Siddharth's most used languages" />
-  </picture>
-</div>
-<br />
-<div align="center">
-  <img src="https://github-profile-trophy-eight.vercel.app/?username=siddharthgaur1&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6&margin-w=8" alt="Siddharth's trophy case" />
-</div>
-
-</details>
-
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/output/github-snake-dark.svg" />
