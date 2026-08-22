@@ -19,11 +19,15 @@
   <a href="#-connect">Connect</a>
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/signal-strip.svg" alt="19 active repos, all green CI. 1 merged open-source PR. 3 real bugs found and fixed. 0 fabricated benchmark numbers." width="100%" />
+</p>
+
 <a href="https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/"><img src="https://raw.githubusercontent.com/siddharthgaur1/sebi-explorer/main/docs/demo.png" width="620" alt="SEBI Enforcement Explorer - live demo"></a>
 
 <sub>▶ One of six live demos — **[SEBI Enforcement Explorer](https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/)**: real public SEBI enforcement orders, classified and analysed. No signup, no API key.</sub>
 
----
+<p align="center"><img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/divider.svg" alt="" width="100%25" height="20" /></p>
 
 <p align="center">
   <picture>
@@ -33,7 +37,7 @@
   </picture>
 </p>
 
----
+<p align="center"><img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/divider.svg" alt="" width="100%25" height="20" /></p>
 
 ### 📌 Open Source
 
@@ -47,7 +51,7 @@ Maintainer-reviewed work outside my own account — including `DenseGATv2Conv`, 
 | [#10757](https://github.com/pyg-team/pytorch_geometric/pull/10757) — clarify `radius`/`radius_graph` CPU vs. GPU behaviour in docs | PyTorch Geometric | Open |
 | [#10761](https://github.com/pyg-team/pytorch_geometric/pull/10761) — add Shapes docstrings to `TransformerConv`/`SplineConv` | PyTorch Geometric | Open |
 
----
+<p align="center"><img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/divider.svg" alt="" width="100%25" height="20" /></p>
 
 ### 🏆 Start here — four projects
 
@@ -64,7 +68,7 @@ All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd 
 
 **Check any of it in a minute:** `pytest --cov=llm_regressor` reprints the coverage figure from a clean clone with no API key; the Elliptic F1 scores read straight out of committed `results/*.json`. Where a number *can't* be reproduced without a paid API key, the README says so instead of quoting one.
 
----
+<p align="center"><img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/divider.svg" alt="" width="100%25" height="20" /></p>
 
 ### ▶ Also built, no signup, no API key
 
@@ -91,13 +95,13 @@ All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd 
 
 </details>
 
----
+<p align="center"><img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/divider.svg" alt="" width="100%25" height="20" /></p>
 
 ### 🧰 Tech Stack
 
 `Python` · `SQL` · `LangGraph` · `PyTorch` · `PyTorch Geometric` · `scikit-learn` · `XGBoost` · `Neo4j` · `ChromaDB` · `FastAPI` · `Docker` · `Kafka` · `Redis` · `PostgreSQL` · `GitHub Actions`
 
----
+<p align="center"><img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/divider.svg" alt="" width="100%25" height="20" /></p>
 
 ### 📫 Connect
 
