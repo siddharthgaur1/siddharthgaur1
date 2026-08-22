@@ -1,14 +1,50 @@
-# Hi, I'm Siddharth 👋
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:111827,50:2563EB,100:7C3AED&height=200&section=header&text=Siddharth%20Gaur&fontSize=54&fontColor=FFFFFF&fontAlignY=35&animation=fadeIn" alt="Siddharth Gaur" />
+</p>
 
-[🌐 siddharth-gaur.netlify.app](https://siddharth-gaur.netlify.app)
+<p align="center">
+  <a href="https://siddharth-gaur.netlify.app">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=2800&pause=900&color=60A5FA&center=true&vCenter=true&width=760&lines=Graph+neural+networks+%C2%B7+LLM+agents+%C2%B7+Retrieval+systems;Every+number+below+traces+to+a+committed+result%2C+not+a+claim" alt="Typing introduction" />
+  </a>
+</p>
 
-**AI/ML Engineer** · Building at the intersection of **graph neural networks**, **LLM agents**, and **retrieval systems**
+<p align="center">
+  <a href="https://siddharth-gaur.netlify.app"><img src="https://img.shields.io/badge/Portfolio-111827?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/siddharth-gaur-804924293/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:siddharthgaur200304@gmail.com"><img src="https://img.shields.io/badge/Email-2563EB?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+  <img src="https://img.shields.io/badge/Open_to-AI%2FML_roles_·_Mumbai%2Fremote-7C3AED?style=flat-square" alt="Open to roles" />
+</p>
 
-**📍 Currently open to AI/ML Engineer roles — Mumbai / remote**
+<p align="center">
+  <a href="#-open-source">Open Source</a> ·
+  <a href="#-start-here--four-projects">Flagship Projects</a> ·
+  <a href="#-also-built-no-signup-no-api-key">More Projects</a> ·
+  <a href="#-tech-stack">Stack</a> ·
+  <a href="#-connect">Connect</a>
+</p>
 
 <a href="https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/"><img src="https://raw.githubusercontent.com/siddharthgaur1/sebi-explorer/main/docs/demo.png" width="620" alt="SEBI Enforcement Explorer - live demo"></a>
 
 <sub>▶ One of six live demos — **[SEBI Enforcement Explorer](https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/)**: real public SEBI enforcement orders, classified and analysed. No signup, no API key.</sub>
+
+---
+
+<details>
+<summary><strong>▸ GitHub stats</strong></summary>
+<br />
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=siddharthgaur1&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&border_radius=12">
+    <img src="https://github-readme-stats.vercel.app/api?username=siddharthgaur1&show_icons=true&include_all_commits=true&count_private=true&theme=default&hide_border=true&border_radius=12" alt="Siddharth's GitHub stats" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=siddharthgaur1&layout=compact&theme=tokyonight&hide_border=true&border_radius=12">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=siddharthgaur1&layout=compact&theme=default&hide_border=true&border_radius=12" alt="Siddharth's most used languages" />
+  </picture>
+</div>
+
+</details>
 
 ---
 
@@ -45,6 +81,10 @@ All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd 
 
 ### ▶ Also built, no signup, no API key
 
+<details>
+<summary><strong>8 more projects — eval harnesses, RAG, graph sims, IPO forecasting, data-quality monitoring</strong> (click to expand)</summary>
+<br />
+
 | Project | What it does | |
 |---|---|---|
 | **[agent-eval-harness](https://github.com/siddharthgaur1/agent-eval-harness)** | Trajectory-level evaluation for multi-step LLM agents — scores the path taken, not just the final answer. Agents are stochastic, so separating real degradation from run-to-run variance is the whole problem | [▶ **demo**](https://siddharthgaur1-siddharthagent-eval-harness-dashboardapp-rppgf9.streamlit.app/) — a real detected regression between two agent versions |
@@ -59,6 +99,8 @@ All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd 
 
 <sub>Demos are hosted free on Streamlit Community Cloud; a sleeping app takes ~30–60s to wake. Each also runs locally from its repo's Quickstart with no API key.</sub>
 
+</details>
+
 ---
 
 ### 🧰 Tech Stack
@@ -71,3 +113,7 @@ All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/siddharth-gaur-804924293/)
 [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:siddharthgaur200304@gmail.com)
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,50:2563EB,100:111827&height=100&section=footer" alt="" />
+</p>
