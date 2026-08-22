@@ -5,21 +5,6 @@
 </p>
 
 ```
-$ whoami
-Siddharth Gaur — AI/ML Engineer, Mumbai / remote
-
-$ cat focus.txt
-Graph Neural Networks · LLM Agents · Retrieval Systems
-
-$ ls -1 proof/
-merged_oss_pr/          1
-bugs_found_and_fixed/   3
-green_ci_repos/         19
-fabricated_numbers/     0   # empty by design, not by accident
-
-$ echo $STATUS
-open to AI/ML roles
-```
 
 <p align="center">
   <a href="https://siddharth-gaur.netlify.app"><img src="https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=googlechrome&logoColor=3B82F6&labelColor=000000" alt="Portfolio" /></a>
