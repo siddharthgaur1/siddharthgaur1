@@ -5,18 +5,22 @@
 </p>
 
 <p align="center">
-  <a href="https://siddharth-gaur.netlify.app"><img src="https://img.shields.io/badge/Portfolio-111827?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/siddharth-gaur-804924293/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:siddharthgaur200304@gmail.com"><img src="https://img.shields.io/badge/Email-2563EB?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
-  <img src="https://img.shields.io/badge/Open_to-AI%2FML_roles_·_Mumbai%2Fremote-7C3AED?style=flat-square" alt="Open to roles" />
+  <a href="https://siddharth-gaur.netlify.app"><img src="https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=googlechrome&logoColor=3B82F6&labelColor=000000" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/siddharth-gaur-804924293/"><img src="https://img.shields.io/badge/LinkedIn-000000?style=flat-square&logo=linkedin&logoColor=8B5CF6&labelColor=000000" alt="LinkedIn" /></a>
+  <a href="mailto:siddharthgaur200304@gmail.com"><img src="https://img.shields.io/badge/Email-000000?style=flat-square&logo=gmail&logoColor=EC4899&labelColor=000000" alt="Email" /></a>
+  <img src="https://img.shields.io/badge/Open_to-AI%2FML_roles_·_Mumbai%2Fremote-8B5CF6?style=flat-square&labelColor=000000" alt="Open to roles" />
 </p>
 
 <p align="center">
-  <a href="#-open-source">Open Source</a> ·
-  <a href="#-start-here--four-projects">Flagship Projects</a> ·
-  <a href="#-also-built-no-signup-no-api-key">More Projects</a> ·
-  <a href="#-tech-stack">Stack</a> ·
-  <a href="#-connect">Connect</a>
+<code>$ profile --sections open-source flagship-projects more-projects tech-stack connect</code>
+</p>
+
+<p align="center">
+  <a href="#-open-source">open-source</a> ·
+  <a href="#-start-here--four-projects">flagship-projects</a> ·
+  <a href="#-also-built-no-signup-no-api-key">more-projects</a> ·
+  <a href="#-tech-stack">tech-stack</a> ·
+  <a href="#-connect">connect</a>
 </p>
 
 <p align="center">
@@ -26,16 +30,6 @@
 <a href="https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/"><img src="https://raw.githubusercontent.com/siddharthgaur1/sebi-explorer/main/docs/demo.png" width="620" alt="SEBI Enforcement Explorer - live demo"></a>
 
 <sub>▶ One of six live demos — **[SEBI Enforcement Explorer](https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/)**: real public SEBI enforcement orders, classified and analysed. No signup, no API key.</sub>
-
-<p align="center"><img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/divider.svg" alt="" width="100%25" height="20" /></p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/output/github-snake.svg" />
-    <img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/output/github-snake.svg" alt="Contribution graph snake animation" />
-  </picture>
-</p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/divider.svg" alt="" width="100%25" height="20" /></p>
 
@@ -99,7 +93,23 @@ All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd 
 
 ### 🧰 Tech Stack
 
-`Python` · `SQL` · `LangGraph` · `PyTorch` · `PyTorch Geometric` · `scikit-learn` · `XGBoost` · `Neo4j` · `ChromaDB` · `FastAPI` · `Docker` · `Kafka` · `Redis` · `PostgreSQL` · `GitHub Actions`
+<p>
+<img src="https://img.shields.io/badge/Python-000000?style=flat-square&logo=python&logoColor=3B82F6" alt="Python" />
+<img src="https://img.shields.io/badge/SQL-000000?style=flat-square" alt="SQL" />
+<img src="https://img.shields.io/badge/LangGraph-000000?style=flat-square" alt="LangGraph" />
+<img src="https://img.shields.io/badge/PyTorch-000000?style=flat-square&logo=pytorch&logoColor=EC4899" alt="PyTorch" />
+<img src="https://img.shields.io/badge/PyTorch_Geometric-000000?style=flat-square" alt="PyTorch Geometric" />
+<img src="https://img.shields.io/badge/scikit--learn-000000?style=flat-square&logo=scikitlearn&logoColor=8B5CF6" alt="scikit-learn" />
+<img src="https://img.shields.io/badge/XGBoost-000000?style=flat-square" alt="XGBoost" />
+<img src="https://img.shields.io/badge/Neo4j-000000?style=flat-square&logo=neo4j&logoColor=3B82F6" alt="Neo4j" />
+<img src="https://img.shields.io/badge/ChromaDB-000000?style=flat-square" alt="ChromaDB" />
+<img src="https://img.shields.io/badge/FastAPI-000000?style=flat-square&logo=fastapi&logoColor=EC4899" alt="FastAPI" />
+<img src="https://img.shields.io/badge/Docker-000000?style=flat-square&logo=docker&logoColor=8B5CF6" alt="Docker" />
+<img src="https://img.shields.io/badge/Kafka-000000?style=flat-square&logo=apachekafka&logoColor=3B82F6" alt="Kafka" />
+<img src="https://img.shields.io/badge/Redis-000000?style=flat-square&logo=redis&logoColor=EC4899" alt="Redis" />
+<img src="https://img.shields.io/badge/PostgreSQL-000000?style=flat-square&logo=postgresql&logoColor=8B5CF6" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/GitHub_Actions-000000?style=flat-square&logo=githubactions&logoColor=3B82F6" alt="GitHub Actions" />
+</p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/divider.svg" alt="" width="100%25" height="20" /></p>
 
