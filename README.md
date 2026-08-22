@@ -1,10 +1,6 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,35:1E3A8A,70:2563EB,100:7C3AED&height=230&section=header&text=Siddharth%20Gaur&fontSize=64&fontColor=FFFFFF&fontAlignY=32&desc=AI%2FML%20Engineer%20%C2%B7%20Graph%20Neural%20Networks%20%C2%B7%20LLM%20Agents%20%C2%B7%20Retrieval%20Systems&descAlignY=54&descSize=17&descColor=BFDBFE&animation=twinkling" alt="Siddharth Gaur" />
-</p>
-
-<p align="center">
   <a href="https://siddharth-gaur.netlify.app">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=19&duration=2800&pause=900&color=60A5FA&center=true&vCenter=true&width=760&lines=Every+number+below+traces+to+a+committed+result%2C+not+a+claim;Green+CI+%C2%B7+reproducible+benchmarks+%C2%B7+no+hand-waved+metrics" alt="Typing introduction" />
+    <img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/banner.svg" alt="Siddharth Gaur — AI/ML Engineer: Graph Neural Networks, LLM Agents, Retrieval Systems" width="100%" />
   </a>
 </p>
 
@@ -109,5 +105,5 @@ All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd 
 [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:siddharthgaur200304@gmail.com)
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,50:2563EB,100:111827&height=100&section=footer" alt="" />
+  <img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/footer.svg" alt="" width="100%" />
 </p>
