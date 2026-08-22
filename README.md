@@ -43,8 +43,20 @@
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=siddharthgaur1&layout=compact&theme=default&hide_border=true&border_radius=12" alt="Siddharth's most used languages" />
   </picture>
 </div>
+<br />
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=siddharthgaur1&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6&margin-w=8" alt="Siddharth's trophy case" />
+</div>
 
 </details>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/output/github-snake.svg" />
+    <img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/output/github-snake.svg" alt="Contribution graph snake animation" />
+  </picture>
+</p>
 
 ---
 
