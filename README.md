@@ -5,6 +5,21 @@
 </p>
 
 ```
+$ whoami
+Siddharth Gaur — AI/ML Engineer, Mumbai / remote
+
+$ cat focus.txt
+Graph Neural Networks · LLM Agents · Retrieval Systems
+
+$ ls -1 proof/
+merged_oss_pr/          1
+bugs_found_and_fixed/   3
+green_ci_repos/         19
+fabricated_numbers/     0   # empty by design, not by accident
+
+$ echo $STATUS
+open to AI/ML roles
+```
 
 <p align="center">
   <a href="https://siddharth-gaur.netlify.app"><img src="https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=googlechrome&logoColor=3B82F6&labelColor=000000" alt="Portfolio" /></a>
@@ -114,6 +129,15 @@ All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd 
 </p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/divider.svg" alt="" width="100%25" height="20" /></p>
+
+### 📫 Connect
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/siddharth-gaur-804924293/)
+[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:siddharthgaur200304@gmail.com)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/footer.svg" alt="" width="100%" />
+</p>
 
 ### 📫 Connect
 
