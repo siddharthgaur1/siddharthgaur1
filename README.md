@@ -73,7 +73,7 @@ All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd 
 ### ▶ Also built, no signup, no API key
 
 <details>
-<summary><strong>8 more projects — eval harnesses, RAG, graph sims, IPO forecasting, data-quality monitoring</strong> (click to expand)</summary>
+<summary><strong>11 more projects — eval harnesses, RAG, graph sims, IPO forecasting, data-quality monitoring, causal inference, MCP, security benchmarking</strong> (click to expand)</summary>
 <br />
 
 | Project | What it does | |
@@ -87,6 +87,9 @@ All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd 
 | **[rail-graph](https://github.com/siddharthgaur1/rail-graph)** | Graph analysis of a synthetic 600-station Indian railway network — PageRank, betweenness, k-shortest paths, resilience simulation. The sim re-runs betweenness per removed node, so the naive version doesn't finish | [▶ **demo**](https://siddharthgaur1-siddharthrail-graph-srcapp-hme3vr.streamlit.app/) — remove links, watch routing degrade |
 | **[ipo-gmp](https://github.com/siddharthgaur1/ipo-gmp)** | XGBoost predicting Indian IPO listing-day returns from Grey Market Premium. Time-ordered data punishes random splits, so validation is time-series CV with calibrated bands. **Synthetic dataset**, clearly labelled — real GMP data isn't publicly licensable | [▶ **demo**](https://siddharthgaur1-siddharthipo-gmp-srcapp-htnhfl.streamlit.app/) — CV and confidence bands |
 | **[nse-daily-monitor](https://github.com/siddharthgaur1/nse-daily-monitor)** | Scheduled data-quality monitoring of the NSE equity bhavcopy — coverage, OHLC bounds, null rates and breadth checked against a trailing 60-day baseline, opening a GitHub issue when a check fails. Publishes **derived metrics only**, never a reconstructable quote, so it runs in public without redistributing exchange data. Built on [nse-warehouse](https://github.com/siddharthgaur1/nse-warehouse) | [▶ **run history**](https://github.com/siddharthgaur1/nse-daily-monitor/actions) — the uptime is the artifact |
+| **[causal-lens](https://github.com/siddharthgaur1/causal-lens)** | Causal inference toolkit — four independently usable methods for "did this intervention actually cause this outcome," not just correlation: A/B testing (frequentist + Bayesian + CUPED), difference-in-differences, synthetic control, and uplift modelling | — |
+| **[indian-markets-mcp](https://github.com/siddharthgaur1/indian-markets-mcp)** | An MCP server exposing Indian market and regulatory data — NSE bhavcopy, NIFTY constituents, AMFI NAVs, SEBI orders — from official, openly published sources only. `latest_day()` resolves against IST, not the host's local clock, so a UTC-hosted server doesn't report yesterday's close as today's for part of every evening | — |
+| **[query-injection-bench](https://github.com/siddharthgaur1/query-injection-bench)** | An adversarial benchmark for prompt injection against NL-to-SQL/Cypher agents: 226 cases, five scored defences, a false-positive set that counts. Found a **critical read-only bypass in my own Cypher guard** — a `//` inside a string literal blinded the validator to a `DETACH DELETE` the database would have executed | [FINDINGS.md](https://github.com/siddharthgaur1/query-injection-bench/blob/master/FINDINGS.md) — attack success rate 0.221 → 0.130 after the fix |
 
 <sub>Demos are hosted free on Streamlit Community Cloud; a sleeping app takes ~30–60s to wake. Each also runs locally from its repo's Quickstart with no API key.</sub>
 
