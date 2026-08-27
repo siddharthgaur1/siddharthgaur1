@@ -34,7 +34,7 @@ open to AI/ML roles
 
 <p align="center">
   <a href="#-open-source">open-source</a> ·
-  <a href="#-start-here--four-projects">flagship-projects</a> ·
+  <a href="#-start-here--three-projects">flagship-projects</a> ·
   <a href="#-also-built-no-signup-no-api-key">more-projects</a> ·
   <a href="#-tech-stack">tech-stack</a> ·
   <a href="#-connect">connect</a>
@@ -70,6 +70,30 @@ Each with a real measured result, not a claimed one.
 
 <table>
 <tr>
+<td width="40%"><a href="https://github.com/siddharthgaur1/openeval"><img src="https://raw.githubusercontent.com/siddharthgaur1/openeval/master/docs/screenshots/eval-runs.png" width="100%" alt="OpenEval"></a></td>
+<td valign="top">
+
+**[📊 OpenEval](https://github.com/siddharthgaur1/openeval)** — self-hosted LangSmith/Helicone alternative: trace every LLM call, version prompts and datasets, run RAG/LLM-judge evals against any provider, block regressions in CI. One `docker compose up`, no vendor lock-in.
+
+Hard part: org → project → RBAC with per-project quotas designed in from the first migration, not bolted onto a single-tenant schema later — multi-tenancy retrofits are where authorization bugs live.
+
+<img src="https://img.shields.io/badge/metrics-17_built--in-000000?style=flat-square&labelColor=000000&color=3B82F6" alt="17 metrics"> <img src="https://img.shields.io/badge/default_judge-local_Ollama%2C_%240-000000?style=flat-square&labelColor=000000&color=8B5CF6" alt="local, free by default"> <img src="https://img.shields.io/badge/CI-PR_regression_gate-000000?style=flat-square&labelColor=000000&color=EC4899" alt="CI regression gate">
+
+</td>
+</tr>
+<tr>
+<td width="40%"><a href="https://github.com/siddharthgaur1/deepresearch"><img src="https://raw.githubusercontent.com/siddharthgaur1/deepresearch/main/docs/screenshots/04-report.png" width="100%" alt="DeepResearch"></a></td>
+<td valign="top">
+
+**[🔎 DeepResearch](https://github.com/siddharthgaur1/deepresearch)** — 9-agent LangGraph pipeline: plan sub-questions, search in parallel, cross-check every claim against ≥2 sources, hand back a cited report with per-claim confidence. Runs end to end on Ollama for $0.
+
+Hard part: the README's own **Security considerations** section flags its Docker-socket-mounted sandbox as a real container-escape vector and explains why it isn't fixed yet, rather than hiding it.
+
+<img src="https://img.shields.io/badge/agents-9%2C_parallel_fan--out-000000?style=flat-square&labelColor=000000&color=3B82F6" alt="9 agents"> <img src="https://img.shields.io/badge/checkpointed-crash--resumes_on_another_worker-000000?style=flat-square&labelColor=000000&color=8B5CF6" alt="checkpointed"> <img src="https://img.shields.io/badge/cost-%240_local%2C_%240.02--0.05%2Fjob_paid-000000?style=flat-square&labelColor=000000&color=EC4899" alt="cost">
+
+</td>
+</tr>
+<tr>
 <td width="40%"><a href="https://github.com/siddharthgaur1/indic-reg-bench"><img src="https://raw.githubusercontent.com/siddharthgaur1/indic-reg-bench/master/docs/social-preview.png" width="100%" alt="indic-reg-bench"></a></td>
 <td valign="top">
 
@@ -81,45 +105,22 @@ Hard part: designing tasks a regex can't solve — SEBI orders quote the noticee
 
 </td>
 </tr>
-<tr>
-<td width="40%"><a href="https://github.com/siddharthgaur1/corpgraph-rag"><img src="https://raw.githubusercontent.com/siddharthgaur1/corpgraph-rag/master/docs/social-preview.png" width="100%" alt="corpgraph-rag"></a></td>
-<td valign="top">
-
-**[🕵️ corpgraph-rag](https://github.com/siddharthgaur1/corpgraph-rag)** — GraphRAG over a Neo4j graph of Indian corporate entities (directors, auditors, promoters, SEBI orders). Question → LLM query plan → few-shot Cypher → traversal → cited answer.
-
-Hard part: the generator's own write-clause check is just a fast-fail — the real guarantee is a regex-enforced read-only guard on the Neo4j client itself, so a prompt-injected write fails before it reaches the database.
-
-<img src="https://img.shields.io/badge/read--only_guard-tested_offline-000000?style=flat-square&labelColor=000000&color=3B82F6" alt="read-only guard"> <img src="https://img.shields.io/badge/Neo4j-GraphRAG-000000?style=flat-square&logo=neo4j&logoColor=8B5CF6&labelColor=000000" alt="Neo4j">
-
-</td>
-</tr>
-<tr>
-<td width="40%"><a href="https://github.com/siddharthgaur1/elliptic-gatv2-aml"><img src="https://raw.githubusercontent.com/siddharthgaur1/elliptic-gatv2-aml/master/docs/social-preview.png" width="100%" alt="elliptic-gatv2-aml"></a></td>
-<td valign="top">
-
-**[🕸️ elliptic-gatv2-aml](https://github.com/siddharthgaur1/elliptic-gatv2-aml)** — flags illicit Bitcoin transactions on a 200k-node temporal graph, benchmarking GATv2/GCN against Random Forest and an MLP under identical splits.
-
-Hard part: diagnosing *why* the graph model loses — illicit nodes are ~2% of the graph, so message passing dilutes their already-informative features with a majority-class neighborhood — instead of just reporting the number.
-
-<img src="https://img.shields.io/badge/illicit--F1-RF_0.8085_vs_GATv2_0.4266-000000?style=flat-square&labelColor=000000&color=EC4899" alt="F1 scores"> <img src="https://img.shields.io/badge/result-negative%2C_reported_honestly-000000?style=flat-square&labelColor=000000&color=8B5CF6" alt="honest negative result">
-
-</td>
-</tr>
 </table>
 
 **Check any of it in a minute:** `pytest --cov=llm_regressor` reprints the coverage figure from a clean clone with no API key; the Elliptic F1 scores read straight out of committed `results/*.json`. Where a number *can't* be reproduced without a paid API key, the README says so instead of quoting one.
+
+<sub>Also worth a look — same bar, not pictured to keep this page short: **[corpgraph-rag](https://github.com/siddharthgaur1/corpgraph-rag)** (GraphRAG with a regex-enforced read-only Neo4j guard), **[elliptic-gatv2-aml](https://github.com/siddharthgaur1/elliptic-gatv2-aml)** (honest negative result: RF 0.8085 beats GATv2 0.4266 illicit-F1), **[ml-platform](https://github.com/siddharthgaur1/ml-platform)** (feature store + drift + fraud scoring, 113 tests), **[query-injection-bench](https://github.com/siddharthgaur1/query-injection-bench)** (found and fixed a critical bypass in my own Cypher guard).</sub>
 
 <p align="center"><img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/divider.svg" alt="" width="100%25" height="20" /></p>
 
 ### ▶ Also built, no signup, no API key
 
 <details>
-<summary><strong>12 more projects — feature store/drift/fraud, eval harnesses, RAG, graph sims, IPO forecasting, data-quality monitoring, causal inference, MCP, security benchmarking</strong> (click to expand)</summary>
+<summary><strong>10 more projects — eval harnesses, RAG, graph sims, IPO forecasting, data-quality monitoring, causal inference, MCP</strong> (click to expand)</summary>
 <br />
 
 | Project | What it does | |
 |---|---|---|
-| **[ml-platform](https://github.com/siddharthgaur1/ml-platform)** | Feature store + drift monitor + real-time fraud scoring (Kafka/Redpanda → Redis → XGBoost+IsolationForest → Postgres), merged from three repos whose seams were load-bearing bugs — a documented drift stub, a duck-typed adapter, a silent `try/except ImportError`. No train/serve skew: online and offline features call the same function. Load-tested at **29.7 req/s, p99 2700ms at 50 concurrent users** | — |
 | **[agent-eval-harness](https://github.com/siddharthgaur1/agent-eval-harness)** | Trajectory-level evaluation for multi-step LLM agents — scores the path taken, not just the final answer. Agents are stochastic, so separating real degradation from run-to-run variance is the whole problem | [▶ **demo**](https://siddharthgaur1-siddharthagent-eval-harness-dashboardapp-rppgf9.streamlit.app/) — a real detected regression between two agent versions |
 | **[llm-regressor](https://github.com/siddharthgaur1/llm-regressor)** | *The library + CI gate.* Model-agnostic (Claude/OpenAI/Ollama/LiteLLM) regression testing for prompt and model changes; a reusable GitHub Action gates a PR in five lines. **123 tests, 100% statement and branch coverage**, ~2s with no API key | — |
 | **[llm-regression-detector](https://github.com/siddharthgaur1/llm-regression-detector)** | *The dashboard + alerting.* Same problem from the other end: a standing harness with a golden dataset, per-category scoring and Slack drift alerts | [▶ **demo**](https://siddharthgaur1-siddharthllm-regression-detector-dashboardapp.streamlit.app/) — evals and drift across runs |
@@ -131,7 +132,6 @@ Hard part: diagnosing *why* the graph model loses — illicit nodes are ~2% of t
 | **[nse-daily-monitor](https://github.com/siddharthgaur1/nse-daily-monitor)** | Scheduled data-quality monitoring of the NSE equity bhavcopy — coverage, OHLC bounds, null rates and breadth checked against a trailing 60-day baseline, opening a GitHub issue when a check fails. Publishes **derived metrics only**, never a reconstructable quote, so it runs in public without redistributing exchange data. Built on [nse-warehouse](https://github.com/siddharthgaur1/nse-warehouse) | [▶ **run history**](https://github.com/siddharthgaur1/nse-daily-monitor/actions) — the uptime is the artifact |
 | **[causal-lens](https://github.com/siddharthgaur1/causal-lens)** | Causal inference toolkit — four independently usable methods for "did this intervention actually cause this outcome," not just correlation: A/B testing (frequentist + Bayesian + CUPED), difference-in-differences, synthetic control, and uplift modelling | — |
 | **[indian-markets-mcp](https://github.com/siddharthgaur1/indian-markets-mcp)** | An MCP server exposing Indian market and regulatory data — NSE bhavcopy, NIFTY constituents, AMFI NAVs, SEBI orders — from official, openly published sources only. `latest_day()` resolves against IST, not the host's local clock, so a UTC-hosted server doesn't report yesterday's close as today's for part of every evening | — |
-| **[query-injection-bench](https://github.com/siddharthgaur1/query-injection-bench)** | An adversarial benchmark for prompt injection against NL-to-SQL/Cypher agents: 226 cases, five scored defences, a false-positive set that counts. Found a **critical read-only bypass in my own Cypher guard** — a `//` inside a string literal blinded the validator to a `DETACH DELETE` the database would have executed | [FINDINGS.md](https://github.com/siddharthgaur1/query-injection-bench/blob/master/FINDINGS.md) — attack success rate 0.221 → 0.130 after the fix |
 
 <sub>Demos are hosted free on Streamlit Community Cloud; a sleeping app takes ~30–60s to wake. Each also runs locally from its repo's Quickstart with no API key.</sub>
 
