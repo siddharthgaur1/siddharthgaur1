@@ -64,18 +64,48 @@ Maintainer-reviewed work outside my own account — including `DenseGATv2Conv`, 
 
 <p align="center"><img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/divider.svg" alt="" width="100%25" height="20" /></p>
 
-### 🏆 Start here — four projects
+### 🏆 Start here — three projects
 
-What each does, what's actually hard about it, and a real measured result (not a claimed one).
+Each with a real measured result, not a claimed one.
 
-| Project | What's technically hard | Measured result |
-|---|---|---|
-| **[⚖️ indic-reg-bench](https://github.com/siddharthgaur1/indic-reg-bench)** — an open benchmark for Indian regulatory document understanding on SEBI enforcement orders: five tasks, pip-installable harness, [HF dataset](https://huggingface.co/datasets/siddharthgaur/indic-reg-bench). *Everything else here is a system I built; this is an instrument others measure* their *systems with* | Designing tasks a regex can't solve. SEBI orders quote the noticee's own settlement pleas in phrasing identical to the ruling, so the first currency amount in a document is the wrong answer 46.7% of the time — that gap is a task, not a bug. Two proposed tasks were cut for being regex-solvable, one for having no signal at this corpus size | 11,957 orders indexed (Nov 2004 – Jul 2026), harness green in CI. **No leaderboard numbers yet, deliberately** — scores need a hand-labelled gold set, and publishing model-generated labels as ground truth would destroy the instrument |
-| **[🕸️ elliptic-gatv2-aml](https://github.com/siddharthgaur1/elliptic-gatv2-aml)** — flags illicit Bitcoin transactions on a 200k-node temporal graph, benchmarking GATv2/GCN against Random Forest and an MLP under identical splits | Diagnosing *why* the graph model loses — illicit nodes are ~2% of the graph, so message passing dilutes their already-informative features with a majority-class neighborhood — instead of just reporting the number | **Illicit-F1: Random Forest 0.8085 vs. GATv2 0.4266.** Random Forest wins, and the README says so. Every number traces to a committed `results/*.json` run |
-| **[🕵️ corpgraph-rag](https://github.com/siddharthgaur1/corpgraph-rag)** — GraphRAG over a Neo4j graph of Indian corporate entities (directors, auditors, promoters, SEBI orders). Question → LLM query plan → few-shot Cypher → traversal → cited answer | The generator's own write-clause check is just a fast-fail; the real guarantee is a regex-enforced read-only guard on the Neo4j client itself, so a prompt-injected write fails before it reaches the database | `test_read_only_guard.py` passes independent of whether Neo4j is even running. No labeled accuracy set for generated-Cypher correctness yet — tracked as an open issue rather than glossed over |
-| **[🏗️ ml-platform](https://github.com/siddharthgaur1/ml-platform)** — feature store + drift monitor + real-time fraud scoring (Kafka/Redpanda → Redis → XGBoost+IsolationForest → Postgres) running through both. Previously three repos, now one | Merging them is the point. Apart, the seams were load-bearing bugs: `featurestore` shipped drift detection as a *documented stub*, the monitor **duck-typed** its feature-store adapter rather than importing it, and the fraud service wrapped `import ml_monitor` in a `try/except ImportError` returning `None` — a whole monitoring backend could silently do nothing | No train/serve skew: online (Redis) and offline (training) features call the same function. Load-tested at **29.7 req/s, p99 2700ms at 50 concurrent users**, with the bottleneck identified (`uvicorn` without `--workers`), not hand-waved |
+<table>
+<tr>
+<td width="40%"><a href="https://github.com/siddharthgaur1/indic-reg-bench"><img src="https://raw.githubusercontent.com/siddharthgaur1/indic-reg-bench/master/docs/social-preview.png" width="100%" alt="indic-reg-bench"></a></td>
+<td valign="top">
 
-All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd actually fix next.
+**[⚖️ indic-reg-bench](https://github.com/siddharthgaur1/indic-reg-bench)** — an open benchmark for Indian regulatory document understanding on SEBI enforcement orders: five tasks, pip-installable harness, [HF dataset](https://huggingface.co/datasets/siddharthgaur/indic-reg-bench). Everything else here is a system I built; this is an instrument others measure *their* systems with.
+
+Hard part: designing tasks a regex can't solve — SEBI orders quote the noticee's own settlement pleas in phrasing identical to the ruling, so the first currency amount in a document is the wrong answer 46.7% of the time.
+
+<img src="https://img.shields.io/badge/orders_indexed-11%2C957-000000?style=flat-square&labelColor=000000&color=3B82F6" alt="orders indexed"> <img src="https://img.shields.io/badge/harness-green_in_CI-000000?style=flat-square&labelColor=000000&color=8B5CF6" alt="CI green"> <img src="https://img.shields.io/badge/leaderboard-deliberately_empty-000000?style=flat-square&labelColor=000000&color=EC4899" alt="no leaderboard yet">
+
+</td>
+</tr>
+<tr>
+<td width="40%"><a href="https://github.com/siddharthgaur1/corpgraph-rag"><img src="https://raw.githubusercontent.com/siddharthgaur1/corpgraph-rag/master/docs/social-preview.png" width="100%" alt="corpgraph-rag"></a></td>
+<td valign="top">
+
+**[🕵️ corpgraph-rag](https://github.com/siddharthgaur1/corpgraph-rag)** — GraphRAG over a Neo4j graph of Indian corporate entities (directors, auditors, promoters, SEBI orders). Question → LLM query plan → few-shot Cypher → traversal → cited answer.
+
+Hard part: the generator's own write-clause check is just a fast-fail — the real guarantee is a regex-enforced read-only guard on the Neo4j client itself, so a prompt-injected write fails before it reaches the database.
+
+<img src="https://img.shields.io/badge/read--only_guard-tested_offline-000000?style=flat-square&labelColor=000000&color=3B82F6" alt="read-only guard"> <img src="https://img.shields.io/badge/Neo4j-GraphRAG-000000?style=flat-square&logo=neo4j&logoColor=8B5CF6&labelColor=000000" alt="Neo4j">
+
+</td>
+</tr>
+<tr>
+<td width="40%"><a href="https://github.com/siddharthgaur1/elliptic-gatv2-aml"><img src="https://raw.githubusercontent.com/siddharthgaur1/elliptic-gatv2-aml/master/docs/social-preview.png" width="100%" alt="elliptic-gatv2-aml"></a></td>
+<td valign="top">
+
+**[🕸️ elliptic-gatv2-aml](https://github.com/siddharthgaur1/elliptic-gatv2-aml)** — flags illicit Bitcoin transactions on a 200k-node temporal graph, benchmarking GATv2/GCN against Random Forest and an MLP under identical splits.
+
+Hard part: diagnosing *why* the graph model loses — illicit nodes are ~2% of the graph, so message passing dilutes their already-informative features with a majority-class neighborhood — instead of just reporting the number.
+
+<img src="https://img.shields.io/badge/illicit--F1-RF_0.8085_vs_GATv2_0.4266-000000?style=flat-square&labelColor=000000&color=EC4899" alt="F1 scores"> <img src="https://img.shields.io/badge/result-negative%2C_reported_honestly-000000?style=flat-square&labelColor=000000&color=8B5CF6" alt="honest negative result">
+
+</td>
+</tr>
+</table>
 
 **Check any of it in a minute:** `pytest --cov=llm_regressor` reprints the coverage figure from a clean clone with no API key; the Elliptic F1 scores read straight out of committed `results/*.json`. Where a number *can't* be reproduced without a paid API key, the README says so instead of quoting one.
 
@@ -84,11 +114,12 @@ All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd 
 ### ▶ Also built, no signup, no API key
 
 <details>
-<summary><strong>11 more projects — eval harnesses, RAG, graph sims, IPO forecasting, data-quality monitoring, causal inference, MCP, security benchmarking</strong> (click to expand)</summary>
+<summary><strong>12 more projects — feature store/drift/fraud, eval harnesses, RAG, graph sims, IPO forecasting, data-quality monitoring, causal inference, MCP, security benchmarking</strong> (click to expand)</summary>
 <br />
 
 | Project | What it does | |
 |---|---|---|
+| **[ml-platform](https://github.com/siddharthgaur1/ml-platform)** | Feature store + drift monitor + real-time fraud scoring (Kafka/Redpanda → Redis → XGBoost+IsolationForest → Postgres), merged from three repos whose seams were load-bearing bugs — a documented drift stub, a duck-typed adapter, a silent `try/except ImportError`. No train/serve skew: online and offline features call the same function. Load-tested at **29.7 req/s, p99 2700ms at 50 concurrent users** | — |
 | **[agent-eval-harness](https://github.com/siddharthgaur1/agent-eval-harness)** | Trajectory-level evaluation for multi-step LLM agents — scores the path taken, not just the final answer. Agents are stochastic, so separating real degradation from run-to-run variance is the whole problem | [▶ **demo**](https://siddharthgaur1-siddharthagent-eval-harness-dashboardapp-rppgf9.streamlit.app/) — a real detected regression between two agent versions |
 | **[llm-regressor](https://github.com/siddharthgaur1/llm-regressor)** | *The library + CI gate.* Model-agnostic (Claude/OpenAI/Ollama/LiteLLM) regression testing for prompt and model changes; a reusable GitHub Action gates a PR in five lines. **123 tests, 100% statement and branch coverage**, ~2s with no API key | — |
 | **[llm-regression-detector](https://github.com/siddharthgaur1/llm-regression-detector)** | *The dashboard + alerting.* Same problem from the other end: a standing harness with a golden dataset, per-category scoring and Slack drift alerts | [▶ **demo**](https://siddharthgaur1-siddharthllm-regression-detector-dashboardapp.streamlit.app/) — evals and drift across runs |
@@ -129,15 +160,6 @@ All four have green CI, a `CHANGELOG.md`, and an open issues list of things I'd 
 </p>
 
 <p align="center"><img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/divider.svg" alt="" width="100%25" height="20" /></p>
-
-### 📫 Connect
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/siddharth-gaur-804924293/)
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:siddharthgaur200304@gmail.com)
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/footer.svg" alt="" width="100%" />
-</p>
 
 ### 📫 Connect
 
