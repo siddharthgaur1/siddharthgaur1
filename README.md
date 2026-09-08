@@ -16,16 +16,6 @@
 
 I build systems that have to be **right**, not just impressive — evaluation harnesses, retrieval pipelines, graph models, and the guardrails around them. Every number below is reproducible from a clean clone, and where one *can't* be, the repo says so instead of quoting it.
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/proof-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/proof-light.svg">
-    <img src="https://raw.githubusercontent.com/siddharthgaur1/siddharthgaur1/main/assets/proof-dark.svg" alt="22 public repos, every CI green. 1 PR merged into pdfplumber. 4 PRs open at PyTorch Geometric. 0 fabricated numbers." width="100%">
-  </picture>
-</p>
-
-<sub><i>Repo and CI counts verified against the GitHub API on 8 September 2026.</i></sub>
-
 ## Start here
 
 Three projects, each with a measured result rather than a claimed one.
