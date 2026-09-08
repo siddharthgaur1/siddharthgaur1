@@ -1,29 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="96" viewBox="0 0 1200 96" role="img" aria-label="22 public repos with every CI green. 1 PR merged into pdfplumber. 4 PRs open at PyTorch Geometric. 0 fabricated numbers.">
 <defs><clipPath id="panel"><rect width="1200" height="96" rx="10"/></clipPath></defs>
-<rect width="1200" height="96" rx="10" fill="#FFFFFF"/>
-<rect x="0.5" y="0.5" width="1199" height="95" rx="10" fill="none" stroke="#E3E8F0"/>
+<rect width="1200" height="96" rx="10" fill="#F7F9FC"/>
+<rect x="0.5" y="0.5" width="1199" height="95" rx="10" fill="none" stroke="#CBD5E1"/>
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.00s" fill="freeze"/>
 <text x="150.0" y="47" text-anchor="middle" font-family="'Segoe UI',Inter,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="27" font-weight="700" fill="#B45309">22</text>
 <text x="150.0" y="66" text-anchor="middle" font-family="'SFMono-Regular',ui-monospace,'Cascadia Mono',Consolas,monospace" font-size="12.5" fill="#475569">public repos</text>
-<text x="150.0" y="82" text-anchor="middle" font-family="'SFMono-Regular',ui-monospace,'Cascadia Mono',Consolas,monospace" font-size="10.5" fill="#7A8AA0">every CI green</text>
+<text x="150.0" y="82" text-anchor="middle" font-family="'SFMono-Regular',ui-monospace,'Cascadia Mono',Consolas,monospace" font-size="10.5" fill="#64748B">every CI green</text>
 </g>
-<line x1="300.0" y1="26" x2="300.0" y2="70" stroke="#E3E8F0"/>
+<line x1="300.0" y1="26" x2="300.0" y2="70" stroke="#CBD5E1"/>
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.25s" fill="freeze"/>
 <text x="450.0" y="47" text-anchor="middle" font-family="'Segoe UI',Inter,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="27" font-weight="700" fill="#B45309">1</text>
 <text x="450.0" y="66" text-anchor="middle" font-family="'SFMono-Regular',ui-monospace,'Cascadia Mono',Consolas,monospace" font-size="12.5" fill="#475569">PR merged</text>
-<text x="450.0" y="82" text-anchor="middle" font-family="'SFMono-Regular',ui-monospace,'Cascadia Mono',Consolas,monospace" font-size="10.5" fill="#7A8AA0">pdfplumber</text>
+<text x="450.0" y="82" text-anchor="middle" font-family="'SFMono-Regular',ui-monospace,'Cascadia Mono',Consolas,monospace" font-size="10.5" fill="#64748B">pdfplumber</text>
 </g>
-<line x1="600.0" y1="26" x2="600.0" y2="70" stroke="#E3E8F0"/>
+<line x1="600.0" y1="26" x2="600.0" y2="70" stroke="#CBD5E1"/>
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.50s" fill="freeze"/>
 <text x="750.0" y="47" text-anchor="middle" font-family="'Segoe UI',Inter,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="27" font-weight="700" fill="#B45309">4</text>
 <text x="750.0" y="66" text-anchor="middle" font-family="'SFMono-Regular',ui-monospace,'Cascadia Mono',Consolas,monospace" font-size="12.5" fill="#475569">PRs open</text>
-<text x="750.0" y="82" text-anchor="middle" font-family="'SFMono-Regular',ui-monospace,'Cascadia Mono',Consolas,monospace" font-size="10.5" fill="#7A8AA0">PyTorch Geometric</text>
+<text x="750.0" y="82" text-anchor="middle" font-family="'SFMono-Regular',ui-monospace,'Cascadia Mono',Consolas,monospace" font-size="10.5" fill="#64748B">PyTorch Geometric</text>
 </g>
-<line x1="900.0" y1="26" x2="900.0" y2="70" stroke="#E3E8F0"/>
+<line x1="900.0" y1="26" x2="900.0" y2="70" stroke="#CBD5E1"/>
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.75s" fill="freeze"/>
 <text x="1050.0" y="47" text-anchor="middle" font-family="'Segoe UI',Inter,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="27" font-weight="700" fill="#B45309">0</text>
 <text x="1050.0" y="66" text-anchor="middle" font-family="'SFMono-Regular',ui-monospace,'Cascadia Mono',Consolas,monospace" font-size="12.5" fill="#475569">fabricated numbers</text>
-<text x="1050.0" y="82" text-anchor="middle" font-family="'SFMono-Regular',ui-monospace,'Cascadia Mono',Consolas,monospace" font-size="10.5" fill="#7A8AA0">by design</text>
+<text x="1050.0" y="82" text-anchor="middle" font-family="'SFMono-Regular',ui-monospace,'Cascadia Mono',Consolas,monospace" font-size="10.5" fill="#64748B">by design</text>
 </g>
-<g clip-path="url(#panel)"><rect x="-170" y="94" width="170" height="2" fill="#0D9488" opacity="0.9" rx="1"><animate attributeName="x" from="-170" to="1200" dur="4.5s" begin="1.2s" repeatCount="indefinite"/></rect></g>
+<g clip-path="url(#panel)"><rect x="-170" y="94" width="170" height="2" fill="#0D7D72" opacity="0.9" rx="1"><animate attributeName="x" from="-170" to="1200" dur="4.5s" begin="1.2s" repeatCount="indefinite"/></rect></g>
 </svg>

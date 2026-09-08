@@ -27,11 +27,13 @@ DARK = dict(
     track="#1A2438", halo="0.16",
 )
 LIGHT = dict(
-    bg0="#FFFFFF", bg1="#F4F6FA", edge="#C7D2E0",
-    node="#64748B", node_core="#1E293B",
-    amber="#B45309", teal="#0D9488",
-    name="#0B1220", role="#475569", meta="#7A8AA0", frame="#E3E8F0",
-    track="#E8EDF4", halo="0.05",
+    # Tinted rather than pure white: on GitHub's white README background a
+    # #FFFFFF card has no edge at all and the whole hero reads as washed out.
+    bg0="#F7F9FC", bg1="#EAEFF6", edge="#A9BACE",
+    node="#475569", node_core="#0F172A",
+    amber="#B45309", teal="#0D7D72",
+    name="#0B1220", role="#475569", meta="#64748B", frame="#CBD5E1",
+    track="#DDE4EE", halo="0.07",
 )
 
 # --- graph geometry ----------------------------------------------------
