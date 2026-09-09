@@ -89,7 +89,6 @@ Maintainer-reviewed work outside my own account. `DenseGATv2Conv` lands directly
 
 | Project | What it does | Demo |
 |---|---|---|
-| **[agent-eval-harness](https://github.com/siddharthgaur1/agent-eval-harness)** | Trajectory-level evaluation for multi-step agents — scores the path taken, not just the final answer. Agents are stochastic, so separating real degradation from run-to-run variance is the whole problem | [▶](https://siddharthgaur1-siddharthagent-eval-harness-dashboardapp-rppgf9.streamlit.app/) |
 | **[llm-regressor](https://github.com/siddharthgaur1/llm-regressor)** | *The library + CI gate.* Model-agnostic regression testing for prompt and model changes; a reusable GitHub Action gates a PR in five lines. 100% statement and branch coverage, ~2s with no API key | — |
 | **[querypilot-v2](https://github.com/siddharthgaur1/querypilot-v2)** | English → SQL with schema-aware RAG (retrieves the 3 relevant table chunks, not a full schema dump). Write-safety is a SQLite `PRAGMA query_only` + authorizer at the DB layer, so a prompt injection that beats every earlier check still can't write | — |
 | **[autonomous-data-scientist](https://github.com/siddharthgaur1/autonomous-data-scientist)** | Give it a CSV and *"predict churn"* — an 11-agent pipeline cleans, explores, engineers features, tunes, evaluates, ships a report. Generated pandas runs through an AST whitelist into a locked-down subprocess (import guard, path guard, rlimits, wall-clock kill). 80 tests | — |
