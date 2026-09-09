@@ -31,7 +31,9 @@ Self-hosted LangSmith alternative: trace every LLM call, version prompts and dat
 
 **The hard part —** org → project → RBAC with per-project quotas designed in from the first migration. Multi-tenancy retrofits are where authorization bugs live.
 
-<img src="https://img.shields.io/badge/17_built--in_metrics-0B0F14?style=flat-square&labelColor=0B0F14&color=FFB627"> <img src="https://img.shields.io/badge/judge_runs_local_%C2%B7_%240-0B0F14?style=flat-square&labelColor=0B0F14&color=2DD4BF"> <img src="https://img.shields.io/badge/CI_regression_gate-0B0F14?style=flat-square&labelColor=0B0F14&color=94A3B8">
+**[Live ▶](https://openeval-frontend.onrender.com)** · [API](https://openeval-backend.onrender.com/health) — free tier, first request cold-starts.
+
+<img src="https://img.shields.io/badge/24_built--in_metrics-0B0F14?style=flat-square&labelColor=0B0F14&color=FFB627"> <img src="https://img.shields.io/badge/judge_runs_local_%C2%B7_%240-0B0F14?style=flat-square&labelColor=0B0F14&color=2DD4BF"> <img src="https://img.shields.io/badge/CI_regression_gate-0B0F14?style=flat-square&labelColor=0B0F14&color=94A3B8">
 
 </td>
 </tr>
@@ -99,6 +101,9 @@ Maintainer-reviewed work outside my own account. `DenseGATv2Conv` lands directly
 | **[indian-markets-mcp](https://github.com/siddharthgaur1/indian-markets-mcp)** | MCP server exposing Indian market and regulatory data from official sources only. `latest_day()` resolves against IST, not the host clock, so a UTC-hosted server doesn't report yesterday's close as today's every evening | — |
 
 <sub><b>About the demos:</b> they run on Streamlit's free tier, so an idle app first shows a <i>"Zzzz — wake it up?"</i> button; one click and roughly 40 seconds brings it back. Every one also runs locally from its repo's Quickstart with no API key.</sub>
+
+
+<sub>▶ demos are on free tiers and sleep when idle — the first click wakes them, which takes about a minute.</sub>
 
 </details>
 
