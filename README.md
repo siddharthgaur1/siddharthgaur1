@@ -16,6 +16,25 @@
 
 I build systems that have to be **right**, not just impressive — evaluation harnesses, retrieval pipelines, graph models, and the guardrails around them. Every number below is reproducible from a clean clone, and where one *can't* be, the repo says so instead of quoting it.
 
+## Open source
+
+Maintainer-reviewed work in other people's projects: four merged, six under review.
+
+| | PR | Project |
+|---|---|---|
+| **Merged** | [#25713](https://github.com/mlflow/mlflow/pull/25713) — fail the `mlflow-skinny`/`mlflow-tracing` build instead of shipping a wheel with zero Python files when a Windows checkout turns the symlinked source into a text file | MLflow |
+| **Merged** | [#12168](https://github.com/fivetran/great_expectations/pull/12168) — report an undefined SQLite standard deviation as `None` instead of raising an opaque `OperationalError` | Great Expectations |
+| **Merged** | [#12169](https://github.com/fivetran/great_expectations/pull/12169) — bring `tests/execution_engine/partition_and_sample/` under mypy and fix what it surfaced | Great Expectations |
+| **Merged** | [#1386](https://github.com/jsvine/pdfplumber/pull/1386) — surface the wrapped exception class name in blank `PdfminerException` messages | pdfplumber |
+| Open | [#1397](https://github.com/jsvine/pdfplumber/pull/1397) — `Page.flush_cache()` now clears the text-map cache: 105 MB → 4.8 MB on a 65-page PDF | pdfplumber |
+| Open | [#7699](https://github.com/chroma-core/chroma/pull/7699) — give `AsyncClient` a way to release its system reference | Chroma |
+| Open | [#10755](https://github.com/pyg-team/pytorch_geometric/pull/10755) — add `DenseGATv2Conv`, the dense counterpart to `GATv2Conv` | PyTorch Geometric |
+| Open | [#10759](https://github.com/pyg-team/pytorch_geometric/pull/10759) — fix `KeyError` in `separate()` for attribute-less heterogeneous node stores | PyTorch Geometric |
+| Open | [#10757](https://github.com/pyg-team/pytorch_geometric/pull/10757) — clarify `radius`/`radius_graph` CPU vs. GPU behaviour in docs | PyTorch Geometric |
+| Open | [#10761](https://github.com/pyg-team/pytorch_geometric/pull/10761) — add Shapes docstrings to `TransformerConv`/`SplineConv` | PyTorch Geometric |
+
+Bugs found by probing libraries I use, reported with a reproduction: [langgraph #8672](https://github.com/langchain-ai/langgraph/issues/8672) (`stream_mode="values"` silently skips steps whose node returns nothing) and [chroma #7735](https://github.com/chroma-core/chroma/issues/7735) (three documented `ValueError`s the client never raises).
+
 ## Start here
 
 Three projects, each with a measured result rather than a claimed one.
@@ -57,7 +76,7 @@ Nine-agent LangGraph pipeline: plan sub-questions, search in parallel, cross-che
 
 ### [indic-reg-bench](https://github.com/siddharthgaur1/indic-reg-bench)
 
-An open benchmark for Indian regulatory document understanding, built on SEBI enforcement orders: five tasks, a pip-installable harness, a [HuggingFace dataset](https://huggingface.co/datasets/siddharthgaur/indic-reg-bench). Everything else here is a system I built; this is an instrument others measure *their* systems with.
+An open benchmark for Indian regulatory document understanding, built on SEBI enforcement orders: five tasks, a harness you install from source, a [HuggingFace dataset](https://huggingface.co/datasets/siddharthgaur/indic-reg-bench). Everything else here is a system I built; this is an instrument others measure *their* systems with.
 
 **The hard part —** designing tasks a regex can't win. SEBI orders quote the noticee's own settlement pleas in phrasing identical to the ruling, so the first currency amount in a document is the wrong answer 46.7% of the time.
 
@@ -67,18 +86,6 @@ An open benchmark for Indian regulatory document understanding, built on SEBI en
 </tr>
 </table>
 
-## Open source
-
-Maintainer-reviewed work outside my own account. `DenseGATv2Conv` lands directly on the graph work above.
-
-| | PR | Project |
-|---|---|---|
-| **Merged** | [#1386](https://github.com/jsvine/pdfplumber/pull/1386) — surface the wrapped exception class name in blank `PdfminerException` messages | pdfplumber |
-| Open | [#10755](https://github.com/pyg-team/pytorch_geometric/pull/10755) — add `DenseGATv2Conv` | PyTorch Geometric |
-| Open | [#10759](https://github.com/pyg-team/pytorch_geometric/pull/10759) — fix `KeyError` in `separate()` for attribute-less heterogeneous node stores | PyTorch Geometric |
-| Open | [#10757](https://github.com/pyg-team/pytorch_geometric/pull/10757) — clarify `radius`/`radius_graph` CPU vs. GPU behaviour in docs | PyTorch Geometric |
-| Open | [#10761](https://github.com/pyg-team/pytorch_geometric/pull/10761) — add Shapes docstrings to `TransformerConv`/`SplineConv` | PyTorch Geometric |
-
 ## Where I don't round up
 
 - **[elliptic-gatv2-aml](https://github.com/siddharthgaur1/elliptic-gatv2-aml)** — a published negative result: Random Forest (0.8085 illicit-F1) beats my GATv2 (0.4266). The finding *is* that the fancy model lost.
@@ -86,13 +93,15 @@ Maintainer-reviewed work outside my own account. `DenseGATv2Conv` lands directly
 - **[recruit-voice-agent](https://github.com/siddharthgaur1/recruit-voice-agent)** — the results doc separates fill rate from accuracy, names the latency target it **missed**, and labels every unrun measurement as unrun.
 
 <details>
-<summary><b>10 more projects</b> — eval harnesses, RAG, graph sims, causal inference, MCP, data-quality monitoring <i>(click to expand)</i></summary>
+<summary><b>10 more projects</b> — eval harnesses, RAG, knowledge graphs, ML platforms, graph sims, causal inference, MCP, data-quality monitoring <i>(click to expand)</i></summary>
 <br>
 
 | Project | What it does | Demo |
 |---|---|---|
 | **[llm-regressor](https://github.com/siddharthgaur1/llm-regressor)** | *The library + CI gate.* Model-agnostic regression testing for prompt and model changes; a reusable GitHub Action gates a PR in five lines. 100% statement and branch coverage, ~2s with no API key | — |
 | **[querypilot-v2](https://github.com/siddharthgaur1/querypilot-v2)** | English → SQL with schema-aware RAG (retrieves the 3 relevant table chunks, not a full schema dump). Write-safety is a SQLite `PRAGMA query_only` + authorizer at the DB layer, so a prompt injection that beats every earlier check still can't write | — |
+| **[corpgraph-rag](https://github.com/siddharthgaur1/corpgraph-rag)** | Indian corporate-network knowledge graph in Neo4j — companies, directors, shareholdings — with GraphRAG question answering over it and a GATv2 link predictor for relationships the filings don't state | — |
+| **[ml-platform](https://github.com/siddharthgaur1/ml-platform)** | A feature store, drift monitor and real-time fraud scorer merged from three repos, so the train/serve seams are real imports instead of duck-typed adapters. Kafka/Redpanda, Redis online features, XGBoost + IsolationForest, Postgres. 113 tests | — |
 | **[autonomous-data-scientist](https://github.com/siddharthgaur1/autonomous-data-scientist)** | Give it a CSV and *"predict churn"* — an 11-agent pipeline cleans, explores, engineers features, tunes, evaluates, ships a report. Generated pandas runs through an AST whitelist into a locked-down subprocess (import guard, path guard, rlimits, wall-clock kill). 80 tests | — |
 | **[Sebi-Explorer](https://github.com/siddharthgaur1/Sebi-Explorer)** | Analytics over real public SEBI enforcement orders: violation classification, penalties, entity network, timeline — the corpus problem that motivated `indic-reg-bench` | [▶](https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/) |
 | **[rail-graph](https://github.com/siddharthgaur1/rail-graph)** | Graph analysis of a synthetic 600-station Indian rail network — PageRank, betweenness, k-shortest paths, resilience simulation. The sim re-runs betweenness per removed node, so the naive version never finishes | [▶](https://siddharthgaur1-siddharthrail-graph-srcapp-hme3vr.streamlit.app/) |
@@ -101,9 +110,6 @@ Maintainer-reviewed work outside my own account. `DenseGATv2Conv` lands directly
 | **[indian-markets-mcp](https://github.com/siddharthgaur1/indian-markets-mcp)** | MCP server exposing Indian market and regulatory data from official sources only. `latest_day()` resolves against IST, not the host clock, so a UTC-hosted server doesn't report yesterday's close as today's every evening | — |
 
 <sub><b>About the demos:</b> they run on Streamlit's free tier, so an idle app first shows a <i>"Zzzz — wake it up?"</i> button; one click and roughly 40 seconds brings it back. Every one also runs locally from its repo's Quickstart with no API key.</sub>
-
-
-<sub>▶ demos are on free tiers and sleep when idle — the first click wakes them, which takes about a minute.</sub>
 
 </details>
 
