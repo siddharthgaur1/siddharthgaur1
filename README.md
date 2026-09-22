@@ -14,102 +14,70 @@
   <a href="mailto:siddharthgaur200304@gmail.com"><img src="https://img.shields.io/badge/Email-0B0F14?style=flat-square&logo=gmail&logoColor=FFB627&labelColor=0B0F14" alt="Email"></a>
 </p>
 
-I build systems that have to be **right**, not just impressive — evaluation harnesses, retrieval pipelines, graph models, and the guardrails around them. Every number below is reproducible from a clean clone, and where one *can't* be, the repo says so instead of quoting it.
-
-## Open source
-
-Maintainer-reviewed work in other people's projects: four merged, six under review.
-
-| | PR | Project |
-|---|---|---|
-| **Merged** | [#25713](https://github.com/mlflow/mlflow/pull/25713) — fail the `mlflow-skinny`/`mlflow-tracing` build instead of shipping a wheel with zero Python files when a Windows checkout turns the symlinked source into a text file | MLflow |
-| **Merged** | [#12168](https://github.com/fivetran/great_expectations/pull/12168) — report an undefined SQLite standard deviation as `None` instead of raising an opaque `OperationalError` | Great Expectations |
-| **Merged** | [#12169](https://github.com/fivetran/great_expectations/pull/12169) — bring `tests/execution_engine/partition_and_sample/` under mypy and fix what it surfaced | Great Expectations |
-| **Merged** | [#1386](https://github.com/jsvine/pdfplumber/pull/1386) — surface the wrapped exception class name in blank `PdfminerException` messages | pdfplumber |
-| Open | [#1397](https://github.com/jsvine/pdfplumber/pull/1397) — `Page.flush_cache()` now clears the text-map cache: 105 MB → 4.8 MB on a 65-page PDF | pdfplumber |
-| Open | [#7699](https://github.com/chroma-core/chroma/pull/7699) — give `AsyncClient` a way to release its system reference | Chroma |
-| Open | [#10755](https://github.com/pyg-team/pytorch_geometric/pull/10755) — add `DenseGATv2Conv`, the dense counterpart to `GATv2Conv` | PyTorch Geometric |
-| Open | [#10759](https://github.com/pyg-team/pytorch_geometric/pull/10759) — fix `KeyError` in `separate()` for attribute-less heterogeneous node stores | PyTorch Geometric |
-| Open | [#10757](https://github.com/pyg-team/pytorch_geometric/pull/10757) — clarify `radius`/`radius_graph` CPU vs. GPU behaviour in docs | PyTorch Geometric |
-| Open | [#10761](https://github.com/pyg-team/pytorch_geometric/pull/10761) — add Shapes docstrings to `TransformerConv`/`SplineConv` | PyTorch Geometric |
-
-Bugs found by probing libraries I use, reported with a reproduction: [langgraph #8672](https://github.com/langchain-ai/langgraph/issues/8672) (`stream_mode="values"` silently skips steps whose node returns nothing) and [chroma #7735](https://github.com/chroma-core/chroma/issues/7735) (three documented `ValueError`s the client never raises).
+I build systems that have to be **right**, not just impressive — eval harnesses, retrieval pipelines, graph models, and the guardrails around them. Every number here is reproducible from a clean clone; where one isn't, the repo says so.
 
 ## Start here
 
-Three projects, each with a measured result rather than a claimed one.
-
 <table>
 <tr>
-<td width="38%"><a href="https://github.com/siddharthgaur1/openeval"><img src="https://raw.githubusercontent.com/siddharthgaur1/openeval/master/docs/screenshots/eval-runs.png" width="100%" alt="OpenEval"></a></td>
-<td valign="top">
+<td width="33%"><a href="https://github.com/siddharthgaur1/openeval"><img src="https://raw.githubusercontent.com/siddharthgaur1/openeval/master/docs/screenshots/eval-runs.png" alt="OpenEval"></a></td>
+<td width="33%"><a href="https://github.com/siddharthgaur1/deepresearch"><img src="https://raw.githubusercontent.com/siddharthgaur1/deepresearch/main/docs/screenshots/04-report.png" alt="DeepResearch"></a></td>
+<td width="33%"><a href="https://github.com/siddharthgaur1/indic-reg-bench"><img src="https://raw.githubusercontent.com/siddharthgaur1/indic-reg-bench/master/docs/social-preview.png" alt="indic-reg-bench"></a></td>
+</tr>
+<tr valign="top">
+<td>
 
-### [OpenEval](https://github.com/siddharthgaur1/openeval)
+**[OpenEval](https://github.com/siddharthgaur1/openeval)** · [live ▶](https://openeval-frontend.onrender.com)
 
-Self-hosted LangSmith alternative: trace every LLM call, version prompts and datasets, run RAG and LLM-judge evals against any provider, block regressions in CI. One `docker compose up`.
-
-**The hard part —** org → project → RBAC with per-project quotas designed in from the first migration. Multi-tenancy retrofits are where authorization bugs live.
-
-**[Live ▶](https://openeval-frontend.onrender.com)** · [API](https://openeval-backend.onrender.com/health) — free tier, first request cold-starts.
-
-<img src="https://img.shields.io/badge/24_built--in_metrics-0B0F14?style=flat-square&labelColor=0B0F14&color=FFB627"> <img src="https://img.shields.io/badge/judge_runs_local_%C2%B7_%240-0B0F14?style=flat-square&labelColor=0B0F14&color=2DD4BF"> <img src="https://img.shields.io/badge/CI_regression_gate-0B0F14?style=flat-square&labelColor=0B0F14&color=94A3B8">
+Self-hosted LangSmith alternative. 24 built-in evaluators, CI regression gate, one `docker compose up`. Org → project → RBAC designed in from the first migration, because multi-tenancy retrofits are where authorization bugs live.
 
 </td>
-</tr>
-<tr>
-<td width="38%"><a href="https://github.com/siddharthgaur1/deepresearch"><img src="https://raw.githubusercontent.com/siddharthgaur1/deepresearch/main/docs/screenshots/04-report.png" width="100%" alt="DeepResearch"></a></td>
-<td valign="top">
+<td>
 
-### [DeepResearch](https://github.com/siddharthgaur1/deepresearch)
+**[DeepResearch](https://github.com/siddharthgaur1/deepresearch)**
 
-Nine-agent LangGraph pipeline: plan sub-questions, search in parallel, cross-check every claim against ≥2 sources, return a cited report with per-claim confidence. Runs end to end on Ollama for $0.
-
-**The hard part —** its own README flags the Docker-socket-mounted sandbox as a real container-escape vector and explains why it isn't fixed yet, rather than hiding it.
-
-<img src="https://img.shields.io/badge/9_agents_%C2%B7_parallel_fan--out-0B0F14?style=flat-square&labelColor=0B0F14&color=FFB627"> <img src="https://img.shields.io/badge/crash--resumes_on_another_worker-0B0F14?style=flat-square&labelColor=0B0F14&color=2DD4BF"> <img src="https://img.shields.io/badge/%240_local_%C2%B7_%240.02--0.05_paid-0B0F14?style=flat-square&labelColor=0B0F14&color=94A3B8">
+Nine LangGraph agents: plan sub-questions, search in parallel, cross-check every claim against ≥2 sources, return a cited report. Crash-resumes on another worker. Runs end to end on Ollama for $0.
 
 </td>
-</tr>
-<tr>
-<td width="38%"><a href="https://github.com/siddharthgaur1/indic-reg-bench"><img src="https://raw.githubusercontent.com/siddharthgaur1/indic-reg-bench/master/docs/social-preview.png" width="100%" alt="indic-reg-bench"></a></td>
-<td valign="top">
+<td>
 
-### [indic-reg-bench](https://github.com/siddharthgaur1/indic-reg-bench)
+**[indic-reg-bench](https://github.com/siddharthgaur1/indic-reg-bench)**
 
-An open benchmark for Indian regulatory document understanding, built on SEBI enforcement orders: five tasks, a harness you install from source, a [HuggingFace dataset](https://huggingface.co/datasets/siddharthgaur/indic-reg-bench). Everything else here is a system I built; this is an instrument others measure *their* systems with.
-
-**The hard part —** designing tasks a regex can't win. SEBI orders quote the noticee's own settlement pleas in phrasing identical to the ruling, so the first currency amount in a document is the wrong answer 46.7% of the time.
-
-<img src="https://img.shields.io/badge/11%2C957_orders_indexed-0B0F14?style=flat-square&labelColor=0B0F14&color=FFB627"> <img src="https://img.shields.io/badge/harness_green_in_CI-0B0F14?style=flat-square&labelColor=0B0F14&color=2DD4BF"> <img src="https://img.shields.io/badge/leaderboard_deliberately_empty-0B0F14?style=flat-square&labelColor=0B0F14&color=94A3B8">
+Open benchmark on 11,957 SEBI enforcement orders, plus a [HF dataset](https://huggingface.co/datasets/siddharthgaur/indic-reg-bench). Tasks a regex can't win — the first currency amount in an order is the wrong answer 46.7% of the time.
 
 </td>
 </tr>
 </table>
 
+## Open source
+
+**4 merged, 6 under review** in other people's projects — [MLflow](https://github.com/mlflow/mlflow/pull/25713) (a Windows checkout shipped a wheel with zero Python files), [Great Expectations](https://github.com/fivetran/great_expectations/pull/12168) [×2](https://github.com/fivetran/great_expectations/pull/12169) (undefined SQLite stddev, mypy coverage), [pdfplumber](https://github.com/jsvine/pdfplumber/pull/1386) (blank exception messages). Under review: a [`DenseGATv2Conv`](https://github.com/pyg-team/pytorch_geometric/pull/10755) layer for PyTorch Geometric, a [pdfplumber cache fix](https://github.com/jsvine/pdfplumber/pull/1397) (105 MB → 4.8 MB on a 65-page PDF), and [four more](https://github.com/pulls?q=is%3Apr+is%3Aopen+author%3Asiddharthgaur1+-user%3Asiddharthgaur1).
+
+Plus bugs found by probing libraries I use, reported with a reproduction: [langgraph #8672](https://github.com/langchain-ai/langgraph/issues/8672), [chroma #7735](https://github.com/chroma-core/chroma/issues/7735).
+
 ## Where I don't round up
 
 - **[elliptic-gatv2-aml](https://github.com/siddharthgaur1/elliptic-gatv2-aml)** — a published negative result: Random Forest (0.8085 illicit-F1) beats my GATv2 (0.4266). The finding *is* that the fancy model lost.
-- **[query-injection-bench](https://github.com/siddharthgaur1/query-injection-bench)** — found and fixed a critical read-only bypass in my *own* Cypher guard, then measured it.
+- **[query-injection-bench](https://github.com/siddharthgaur1/query-injection-bench)** — 226 attack cases that found a critical read-only bypass in my *own* Cypher guard, then measured the fix.
 - **[recruit-voice-agent](https://github.com/siddharthgaur1/recruit-voice-agent)** — the results doc separates fill rate from accuracy, names the latency target it **missed**, and labels every unrun measurement as unrun.
 
 <details>
-<summary><b>10 more projects</b> — eval harnesses, RAG, knowledge graphs, ML platforms, graph sims, causal inference, MCP, data-quality monitoring <i>(click to expand)</i></summary>
-<br>
+<summary><b>10 more projects</b> — eval tooling, RAG, knowledge graphs, ML platforms, causal inference, MCP</summary>
 
-| Project | What it does | Demo |
-|---|---|---|
-| **[llm-regressor](https://github.com/siddharthgaur1/llm-regressor)** | *The library + CI gate.* Model-agnostic regression testing for prompt and model changes; a reusable GitHub Action gates a PR in five lines. 100% statement and branch coverage, ~2s with no API key | — |
-| **[querypilot-v2](https://github.com/siddharthgaur1/querypilot-v2)** | English → SQL with schema-aware RAG (retrieves the 3 relevant table chunks, not a full schema dump). Write-safety is a SQLite `PRAGMA query_only` + authorizer at the DB layer, so a prompt injection that beats every earlier check still can't write | — |
-| **[corpgraph-rag](https://github.com/siddharthgaur1/corpgraph-rag)** | Indian corporate-network knowledge graph in Neo4j — companies, directors, shareholdings — with GraphRAG question answering over it and a GATv2 link predictor for relationships the filings don't state | — |
-| **[ml-platform](https://github.com/siddharthgaur1/ml-platform)** | A feature store, drift monitor and real-time fraud scorer merged from three repos, so the train/serve seams are real imports instead of duck-typed adapters. Kafka/Redpanda, Redis online features, XGBoost + IsolationForest, Postgres. 113 tests | — |
-| **[autonomous-data-scientist](https://github.com/siddharthgaur1/autonomous-data-scientist)** | Give it a CSV and *"predict churn"* — an 11-agent pipeline cleans, explores, engineers features, tunes, evaluates, ships a report. Generated pandas runs through an AST whitelist into a locked-down subprocess (import guard, path guard, rlimits, wall-clock kill). 80 tests | — |
-| **[Sebi-Explorer](https://github.com/siddharthgaur1/Sebi-Explorer)** | Analytics over real public SEBI enforcement orders: violation classification, penalties, entity network, timeline — the corpus problem that motivated `indic-reg-bench` | [▶](https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/) |
-| **[rail-graph](https://github.com/siddharthgaur1/rail-graph)** | Graph analysis of a synthetic 600-station Indian rail network — PageRank, betweenness, k-shortest paths, resilience simulation. The sim re-runs betweenness per removed node, so the naive version never finishes | [▶](https://siddharthgaur1-siddharthrail-graph-srcapp-hme3vr.streamlit.app/) |
-| **[nse-daily-monitor](https://github.com/siddharthgaur1/nse-daily-monitor)** | Scheduled data-quality monitoring of the NSE bhavcopy — coverage, OHLC bounds, null rates and breadth against a trailing 60-day baseline, opening a GitHub issue when a check fails. Publishes derived metrics only, never a reconstructable quote | [▶ runs](https://github.com/siddharthgaur1/nse-daily-monitor/actions) |
-| **[causal-lens](https://github.com/siddharthgaur1/causal-lens)** | Four independently usable methods for *"did this intervention actually cause this outcome"* — A/B testing (frequentist + Bayesian + CUPED), difference-in-differences, synthetic control, uplift modelling | — |
-| **[indian-markets-mcp](https://github.com/siddharthgaur1/indian-markets-mcp)** | MCP server exposing Indian market and regulatory data from official sources only. `latest_day()` resolves against IST, not the host clock, so a UTC-hosted server doesn't report yesterday's close as today's every evening | — |
+| Project | What it does |
+|---|---|
+| **[llm-regressor](https://github.com/siddharthgaur1/llm-regressor)** | Regression testing for prompt and model changes; a reusable Action gates a PR in five lines. 100% branch coverage, ~2s, no API key |
+| **[querypilot-v2](https://github.com/siddharthgaur1/querypilot-v2)** | English → SQL with schema-aware RAG. Write-safety is `PRAGMA query_only` plus an authorizer at the DB layer, so an injection that beats every earlier check still can't write |
+| **[corpgraph-rag](https://github.com/siddharthgaur1/corpgraph-rag)** | Indian corporate network in Neo4j — GraphRAG question answering plus a GATv2 link predictor for relationships the filings don't state |
+| **[ml-platform](https://github.com/siddharthgaur1/ml-platform)** | Feature store, drift monitor and real-time fraud scoring merged so the train/serve seams are real imports, not duck-typed adapters. 113 tests |
+| **[autonomous-data-scientist](https://github.com/siddharthgaur1/autonomous-data-scientist)** | A CSV and *"predict churn"* → 11 agents clean, tune, evaluate and report. Generated pandas runs through an AST whitelist into a locked-down subprocess |
+| **[causal-lens](https://github.com/siddharthgaur1/causal-lens)** | A/B testing (frequentist + Bayesian + CUPED), difference-in-differences, synthetic control, uplift modelling |
+| **[indian-markets-mcp](https://github.com/siddharthgaur1/indian-markets-mcp)** | MCP server, 8 tools, official sources only. Resolves the latest trading day against IST, so a UTC host doesn't report yesterday's close |
+| **[nse-daily-monitor](https://github.com/siddharthgaur1/nse-daily-monitor)** | Daily NSE bhavcopy checks against a trailing 60-day baseline, opening an issue when one fails. Derived metrics only, never a reconstructable quote |
+| **[Sebi-Explorer](https://github.com/siddharthgaur1/Sebi-Explorer)** · [▶](https://siddharthgaur1-siddharthsebi-explorer-srcapp-kputga.streamlit.app/) | Analytics over real public SEBI enforcement orders — the corpus problem that motivated `indic-reg-bench` |
+| **[rail-graph](https://github.com/siddharthgaur1/rail-graph)** · [▶](https://siddharthgaur1-siddharthrail-graph-srcapp-hme3vr.streamlit.app/) | A 600-station rail network as a graph: PageRank, betweenness, k-shortest paths, resilience simulation |
 
-<sub><b>About the demos:</b> they run on Streamlit's free tier, so an idle app first shows a <i>"Zzzz — wake it up?"</i> button; one click and roughly 40 seconds brings it back. Every one also runs locally from its repo's Quickstart with no API key.</sub>
+<sub>Demos run on free tiers, so an idle app first shows a wake button and takes ~40 seconds. Every one also runs locally from its repo's Quickstart with no API key.</sub>
 
 </details>
 
