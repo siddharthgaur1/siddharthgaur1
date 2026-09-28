@@ -57,7 +57,7 @@ Plus bugs found by probing libraries I use, reported with a reproduction: [langg
 
 ## Where I don't round up
 
-- **[elliptic-gatv2-aml](https://github.com/siddharthgaur1/elliptic-gatv2-aml)** — a published negative result: Random Forest (0.8085 illicit-F1) beats my GATv2 (0.4266). The finding *is* that the fancy model lost.
+- **[elliptic-gatv2-aml](https://github.com/siddharthgaur1/elliptic-gatv2-aml)** — a published negative result: Random Forest (0.811 ± 0.005 illicit-F1 over 4 seeds) beats my GATv2 (0.365 ± 0.103) on every seed. The finding *is* that the fancy model lost.
 - **[query-injection-bench](https://github.com/siddharthgaur1/query-injection-bench)** — 226 attack cases that found a critical read-only bypass in my *own* Cypher guard, then measured the fix.
 - **[recruit-voice-agent](https://github.com/siddharthgaur1/recruit-voice-agent)** — the results doc separates fill rate from accuracy, names the latency target it **missed**, and labels every unrun measurement as unrun.
 
