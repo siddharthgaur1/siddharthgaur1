@@ -43,7 +43,7 @@ Nine LangGraph agents: plan sub-questions, search in parallel, cross-check every
 
 **[indic-reg-bench](https://github.com/siddharthgaur1/indic-reg-bench)**
 
-Open benchmark on 11,957 SEBI enforcement orders, plus a [HF dataset](https://huggingface.co/datasets/siddharthgaur/indic-reg-bench). Tasks a regex can't win — the first currency amount in an order is the wrong answer 46.7% of the time.
+Open benchmark on 11,957 SEBI enforcement orders, plus a [HF dataset](https://huggingface.co/datasets/siddharthgaur/indic-reg-bench). Tasks a regex can't win — the first currency amount disagrees with the regex-located operative paragraph in 48.6% of comparable orders.
 
 </td>
 </tr>
